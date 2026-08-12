@@ -1,0 +1,12 @@
+{
+  "name": "D-Pay — Mobile Money Démo",
+  "short_name": "D-Pay",
+  "description": "Démonstration pédagogique d’un portefeuille mobile money simple et assisté.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f4f6f8",
+  "theme_color": "#0f172a",
+  "lang": "fr",
+  "orientation": "portrait-primary"
+}
