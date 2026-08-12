@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#0f172a" />
+  <meta name="description" content="D-Pay, démonstration pédagogique de portefeuille mobile money." />
+  <title>D-Pay — Mobile Money</title>
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">Démonstration</p>
+        <h1>D-Pay</h1>
+      </div>
+      <button class="icon-button" id="helpButton" type="button" aria-label="Afficher l'aide">?</button>
+    </header>
+
+    <main id="app" class="app-content" aria-live="polite"></main>
+
+    <nav class="bottom-nav" aria-label="Navigation principale">
+      <button class="nav-item active" data-route="home" type="button">
+        <span class="nav-icon" aria-hidden="true">⌂</span>
+        <span>Accueil</span>
+      </button>
+      <button class="nav-item" data-route="history" type="button">
+        <span class="nav-icon" aria-hidden="true">↕</span>
+        <span>Activité</span>
+      </button>
+      <button class="nav-item" data-route="receive" type="button">
+        <span class="nav-icon" aria-hidden="true">▦</span>
+        <span>Recevoir</span>
+      </button>
+      <button class="nav-item" data-route="profile" type="button">
+        <span class="nav-icon" aria-hidden="true">●</span>
+        <span>Profil</span>
+      </button>
+    </nav>
+  </div>
+
+  <dialog id="modal" class="modal">
+    <div id="modalContent"></div>
+  </dialog>
+
+  <template id="transactionItemTemplate">
+    <article class="transaction-row">
+      <div class="transaction-icon"></div>
+      <div class="transaction-main">
+        <strong class="transaction-title"></strong>
+        <span class="transaction-meta"></span>
+      </div>
+      <strong class="transaction-amount"></strong>
+    </article>
+  </template>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
